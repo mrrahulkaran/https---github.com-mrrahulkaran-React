@@ -1,0 +1,22 @@
+{
+  "name": "first-app",
+  "version": "1.0.0",
+  "description": "first react app",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mrrahulkaran/React.git"
+  },
+  "author": "Rahul karan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrrahulkaran/React/issues"
+  },
+  "homepage": "https://github.com/mrrahulkaran/React#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  }
+}
