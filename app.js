@@ -1,3 +1,6 @@
+import React from "react"
+import ReactDOM from "react-dom";
+
 const heading = React.createElement(
   "h1",
   {
@@ -19,7 +22,7 @@ const container = React.createElement(
   {
     id:"container"
   },
-   [heading,heading]
+   [heading,heading2]
 )
 
 console.log(heading)
