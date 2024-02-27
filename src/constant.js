@@ -1,76 +1,5 @@
-/* 
-
-parcel is a bundeler spacilities of parcel
---HMR hot module reloading
---file watcher algorithm writen in c++
---minification
---HMR- Hot model replacement
---Dev and production build
---superfast build algorithm
---Image optimization
--- Suports older version of browsers add polyfilss
-*/
-
-// react element
-
-// const heading = React.createElement(
-//   "h1",
-//   {
-//     id:"title",
-//     key:"h1",
-//   },
-//    "heading1"
-// );
-
-// react element--------
-// const heading = (
-//   <div><h1>hy from react element</h1></div>
-// );
-
-// const tiitle = (
-//   <div>
-//     <h1>hy from react element component-- tiitle</h1>
-//   </div>
-// );
-
-// react component------ 1==functional component 2==Class component
-
-// component Composition----importing component inside another functional component like this---{<heading/>}
-
-// const Headercomponent = function () {
-//   return (
-//     <div>
-//       <Tiitle />
-//       {Tiitle()}
-//       <h1>Namaste React from h2 hi this is header component</h1>
-//       <h2>Namaste React from h1</h2>
-//     </div>
-//   );
-// };
-
-/* header 
-     -- logo 
-     -- nav items (about us cart contact us)
-
-  Body
-    -- Search bar
-    --resturant list
-    --resturent Cart
-           ---img
-           --Name
-           ---cusins
-           ---Rating   
-*/
-/* React.fragment-- it is a emplty tag that is understood by jsx
-   
-react say there will be only one parant div but if we want to multiple component to render inside a component then we use React.fragment as a parant div
-
-
-*/
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const RestaurantsList = [
+//live data
+export const RestaurantsList = [
   {
     info: {
       id: "437010",
@@ -323,31 +252,9 @@ const RestaurantsList = [
   },
 ];
 
-const Title = () => (
-  <a href='/'>
-    <img
-      src='https://yt3.googleusercontent.com/ytc/AIf8zZS3z6ihwP6q2VdS0PftKtQQ6GtHTPgKTFF6p6PC=s900-c-k-c0x00ffffff-no-rj'
-      className='logo'
-      alt='logo'
-    ></img>
-  </a>
-);
+// hardcoded data
 
-const Header = function () {
-  return (
-    <div className='header'>
-      <Title />
-      <ul className='nav-item'>
-        <li>Your Order</li>
-        <li>Offers</li>
-        <li>Cart</li>
-        <li>Contact Us</li>
-      </ul>
-    </div>
-  );
-};
-
-const BurgerKing = {
+export const BurgerKing = {
   name: "Burgur king",
   image:
     "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf",
@@ -355,65 +262,5 @@ const BurgerKing = {
   rating: "4.2",
 };
 
-const RestaurantCard = ({ Restraunt }) => {
-  const { name, cuisines, avgRating, cloudinaryImageId } = Restraunt.info;
-
-  // {
-  //   console.log(props.Restraunt.info.name);
-  // }
-  return (
-    <div className='card'>
-      <img
-        src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          cloudinaryImageId
-        }
-        alt='card-img'
-      ></img>
-
-      <h2>{name}</h2>
-      <h3>{cuisines.join(", ")}</h3>
-      <h4>{avgRating} Rating</h4>
-    </div>
-  );
-};
-
-const Body = function () {
-  return (
-    <div className='body'>
-      <RestaurantCard Restraunt={RestaurantsList[0]} />
-      <RestaurantCard Restraunt={RestaurantsList[1]} />
-      <RestaurantCard Restraunt={RestaurantsList[2]} />
-      <RestaurantCard Restraunt={RestaurantsList[3]} />
-      <RestaurantCard Restraunt={RestaurantsList[0]} />
-      <RestaurantCard Restraunt={RestaurantsList[1]} />
-      <RestaurantCard Restraunt={RestaurantsList[2]} />
-      <RestaurantCard Restraunt={RestaurantsList[3]} />
-      <RestaurantCard Restraunt={RestaurantsList[2]} />
-      <RestaurantCard Restraunt={RestaurantsList[3]} />
-    </div>
-  );
-};
-
-const Footer = function () {
-  return (
-    <div className='footer'>
-      <h1>footer</h1>
-    </div>
-  );
-};
-
-const Applayout = () => {
-  return (
-    <React.Fragment>
-      <Header />
-      <Body />
-      <Footer />
-    </React.Fragment>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-//  root.render(heading)
-root.render(<Applayout />);
+export const ImageCDN_URL =
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
